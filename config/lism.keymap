@@ -75,19 +75,6 @@
         };
 
         layer_2 {
-            display-name = "Brank Layer";
-            bindings = <
-&trans        &kp NUMBER_7       &kp NUMBER_8         &kp NUMBER_9       &kp EQUAL                          &kp F1     &kp F2    &kp F7           &kp F10      &kp RSHIFT
-&kp ASTERISK  &mt LALT NUMBER_4  &mt LSHIFT NUMBER_5  &mt LGUI NUMBER_6  &mt LCTRL MINUS                    &mkp MB1   &kp LEFT  &kp UP           &kp RIGHT    &kp RGUI
-&kp SLASH     &kp NUMBER_1       &kp NUMBER_2         &kp NUMBER_3       &kp PLUS                           &mkp MB2   &none     &kp DOWN         &none        &kp RALT
-&trans        &kp DOT            &kp NUMBER_0         &kp UP             &kp LANG2        &trans    &trans  &kp LANG1  &kp UP    &kp RS(RC(TAB))  &kp RC(TAB)  &kp F12
-                                 &kp LEFT             &kp DOWN           &kp RIGHT                          &kp LEFT   &kp DOWN  &kp RIGHT
-            >;
-
-            sensor-bindings = <&encoder_kp C_VOL_UP C_VOL_DN>;
-        };
-
-        layer_8 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
@@ -98,17 +85,6 @@
         };
 
         layer_3 {
-            display-name = "Brank Layer";
-            bindings = <
-&kp LS(LG(N4))  &kp F4   &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS  &none                        &kp TILDE  &kp EXCLAMATION  &kp AT_SIGN       &kp HASH           &kp DOLLAR
-&emoji          &kp F5   &kp LEFT_BRACKET      &kp RIGHT_BRACKET      &none                        &kp GRAVE  &kp UNDER        &kp SINGLE_QUOTE  &kp DOUBLE_QUOTES  &kp BACKSLASH
-&kp KP_NUMLOCK  &kp F11  &kp LEFT_BRACE        &kp RIGHT_BRACE        &none                        &kp PIPE   &kp PERCENT      &kp CARET         &kp AMPERSAND      &kp ASTERISK
-&trans          &trans   &kp NUMBER_0          &trans                 &kp SPACE  &trans    &trans  &kp ENTER  &trans           &none             &none              &kp F12
-                         &trans                &trans                 &trans                       &trans     &trans           &trans
-            >;
-        };
-
-        layer_5 {
             status = "reserved";
             display-name = "Brank Layer";
             bindings = <
@@ -120,9 +96,31 @@
             >;
         };
 
-        layer_6 {
+        layer_4 {
             status = "reserved";
             display-name = "Brank Layer";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans  &trans  &trans  &trans
+                &trans  &trans  &trans                    &trans  &trans  &trans
+            >;
+        };
+
+        layer_5 {
+            status = "reserved";
+            display-name = "Brank Layer";
+            bindings = <
+&trans  &trans  &trans  &trans  &trans                    &trans  &trans        &trans        &trans        &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &kp NUMBER_4  &kp NUMBER_5  &trans        &trans
+&trans  &trans  &trans  &trans  &trans                    &trans  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &trans
+&trans  &trans  &trans  &trans  &trans  &trans    &trans  &trans  &trans        &trans        &trans        &trans
+                &trans  &trans  &trans                    &trans  &trans        &trans
+            >;
+        };
+
+        layer_6 {
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
@@ -133,8 +131,6 @@
         };
 
         layer_7 {
-            status = "reserved";
-            display-name = "Brank Layer";
             bindings = <
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
 &trans  &trans  &trans  &trans  &trans                    &trans  &trans  &trans  &trans  &trans
@@ -145,7 +141,7 @@
         };
 
         layer_8 {
-            display-name = "Device Layer";
+            display-name = "Brank Layer";
             bindings = <
 &none        &none           &none   &none   &bt BT_CLR                           &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4
 &none        &none           &none   &none   &none                                &none         &none         &none         &none         &none
