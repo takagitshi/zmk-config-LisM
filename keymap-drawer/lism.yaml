@@ -21,7 +21,7 @@ layers:
   - K
   - {t: L, h: toggle}
   - '-'
-  - Z
+  - {t: Z, h: '$$mdi:apple-keyboard-shift$$'}
   - X
   - C
   - V
