@@ -12,15 +12,15 @@ layers:
   - O
   - P
   - A
-  - {t: S, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: D, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: F, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: G, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: H, h: '$$mdi:apple-keyboard-control$$'}
-  - {t: J, h: '$$mdi:apple-keyboard-command$$'}
-  - {t: K, h: '$$mdi:apple-keyboard-shift$$'}
-  - {t: L, h: '$$mdi:apple-keyboard-option$$'}
-  - {t: ;, h: Mark Layer}
+  - S
+  - D
+  - F
+  - G
+  - H
+  - J
+  - K
+  - {t: L, h: toggle}
+  - '-'
   - Z
   - X
   - C
@@ -30,25 +30,25 @@ layers:
   - M
   - ','
   - .
-  - /
-  - {t: '$$mdi:backspace-reverse-outline$$', h: Device Layer}
-  - {t: Mouse Layer, h: toggle}
-  - {t: '$$mdi:keyboard-tab$$', h: Mouse Layer}
-  - $$mdi:pan-up$$
-  - {t: '$$mdi:keyboard-space$$', h: Number Layer}
-  - {t: '$$mdi:keyboard-esc$$', h: Mark Layer}
-  - {t: '$$mdi:backspace$$', h: Mark Layer}
-  - {t: '$$mdi:keyboard-return$$', h: Number Layer}
-  - $$mdi:pan-up$$
-  - F7
-  - F10
+  - {t: QUESTION, h: '$$mdi:apple-keyboard-shift$$'}
+  - $$mdi:apple-keyboard-command$$
+  - $$mdi:apple-keyboard-option$$
+  - $$mdi:apple-keyboard-control$$
+  - ''
+  - {t: LANGUAGE 1, h: Mouse Layer}
+  - {t: '$$mdi:keyboard-space$$', h: Mouse Layer}
+  - {t: '$$mdi:keyboard-return$$', h: Mouse Layer}
+  - {t: '$$mdi:backspace$$', type: backspace}
+  - ''
+  - Mouse Layer
+  - Mouse Layer
   - {t: F12, h: Device Layer}
-  - $$mdi:pan-left$$
-  - $$mdi:pan-down$$
-  - $$mdi:pan-right$$
-  - $$mdi:pan-left$$
-  - $$mdi:pan-down$$
-  - $$mdi:pan-right$$
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
+  - ''
   Mouse Layer:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -82,9 +82,9 @@ layers:
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
+  - {t: ▽, type: trans}
   - {type: held}
-  - {t: ▽, type: trans}
-  - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
@@ -133,7 +133,7 @@ layers:
   - .
   - '0'
   - $$mdi:arrow-up-bold$$
-  - {t: LANG2, type: held}
+  - LANG2
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - LANG1
@@ -167,7 +167,7 @@ layers:
   - _
   - ''''
   - '"'
-  - {t: \, type: held}
+  - \
   - KP NUMLOCK
   - F11
   - '{'
@@ -227,7 +227,7 @@ layers:
   - ''
   - ''
   - {t: '$$mdi:backup-restore$$', type: bootloader}
-  - {t: '$$mdi:progress-download$$', type: held}
+  - $$mdi:progress-download$$
   - BT CLR ALL
   - ''
   - ''
@@ -238,7 +238,7 @@ layers:
   - ''
   - ''
   - ''
-  - $$mdi:progress-download$$
+  - {t: '$$mdi:progress-download$$', type: held}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
   - {t: ▽, type: trans}
