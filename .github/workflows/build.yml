@@ -38,8 +38,8 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      - name: Test gesture state machine
-        run: make test-gesture
+      - name: Test input state machines
+        run: make test-gesture test-encoder
 
   build:
     # main branch @ 2026-08-06 (matches config/west.yml zmk revision)

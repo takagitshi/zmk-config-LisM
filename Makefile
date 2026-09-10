@@ -4,7 +4,7 @@ WEST_WS := $(ROOT_DIR)/_west
 # 並列数を環境変数 PARALLEL から取得。未設定の場合はCPUコア数を自動検出。
 PARALLEL ?= $(shell nproc 2>/dev/null || sysctl -n hw.ncpu 2>/dev/null || echo 2)
 
-.PHONY: all_p all all_studio_p all_studio setup-west single test-gesture clean check-build-tools
+.PHONY: all_p all all_studio_p all_studio setup-west single test-gesture test-encoder clean check-build-tools
 
 check-build-tools:
 	@command -v yq >/dev/null || { echo 'yq is not installed.' >&2; exit 1; }
@@ -39,6 +39,13 @@ test-gesture:
 		trap 'rm -f "$${TEST_BIN}"' EXIT; \
 		cc -std=c11 -Wall -Wextra -Werror -Iinclude \
 			src/gesture_state.c tests/gesture_state_test.c -o "$${TEST_BIN}"; \
+		"$${TEST_BIN}"
+
+test-encoder:
+	@TEST_BIN="$$(mktemp -t lism-encoder-divider-state-test.XXXXXX)"; \
+		trap 'rm -f "$${TEST_BIN}"' EXIT; \
+		cc -std=c11 -Wall -Wextra -Werror -Iinclude \
+			src/encoder_divider_state.c tests/encoder_divider_state_test.c -o "$${TEST_BIN}"; \
 		"$${TEST_BIN}"
 
 clean:

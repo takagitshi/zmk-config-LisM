@@ -30,6 +30,14 @@
     };
 
     behaviors {
+        encoder_key_divider: encoder_key_divider {
+            compatible = "zmk,behavior-encoder-key-divider";
+            #binding-cells = <1>;
+            bindings = <&kp>;
+            divisor = <2>;
+            display-name = "Encoder Divided Key Press";
+        };
+
         encoder_msc: sensor_rotate_msc {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
@@ -41,7 +49,7 @@
         encoder_kp: sensor_rotate_kp {
             compatible = "zmk,behavior-sensor-rotate-var";
             #sensor-binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
+            bindings = <&encoder_key_divider>, <&encoder_key_divider>;
         };
 
         encoder_none: sensor_rotate_none {
@@ -77,7 +85,7 @@
                           &none   &none   &none                     &none   &none     &none
             >;
 
-            sensor-bindings = <&encoder_none>;
+            sensor-bindings = <&encoder_kp C_VOLUME_UP C_VOLUME_DOWN>;
         };
 
         layer_2 {
