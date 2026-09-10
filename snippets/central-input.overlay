@@ -1,0 +1,33 @@
+/* Shared processing for pointing data received from the peripheral half. */
+&peripheral_listener {
+    input-processors =
+        <&gesture_2_processor>,
+        <&gesture_1_processor>,
+        <&zip_temp_layer 1 10000>;
+
+    scroller {
+        layers = <2>;
+        input-processors =
+            <&zip_xy_to_scroll_mapper>,
+            <&zip_scroll_scaler 1 16>;
+        process-next;
+    };
+};
+
+&zip_temp_layer {
+    require-prior-idle-ms = <300>;
+    excluded-positions = <16 17 18 19 20 30>;
+};
+
+&gesture_1_processor {
+    status = "okay";
+};
+
+&gesture_2_processor {
+    status = "okay";
+};
+
+/* Refresh the AML timeout while a mouse button is pressed or released. */
+&mkp_input_listener {
+    input-processors = <&zip_temp_layer 1 10000>;
+};

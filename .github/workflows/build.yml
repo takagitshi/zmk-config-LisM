@@ -5,19 +5,42 @@ on:
     branches: [ main ]
     paths:
       - '.github/workflows/build.yml'
+      - 'CMakeLists.txt'
+      - 'Kconfig'
+      - 'Makefile'
       - 'boards/**'
       - 'config/**'
+      - 'dts/**'
+      - 'include/**'
       - 'snippets/**'
+      - 'src/**'
+      - 'tests/**'
+      - 'zephyr/**'
       - 'build.yaml'
   pull_request:
     paths:
       - '.github/workflows/build.yml'
+      - 'CMakeLists.txt'
+      - 'Kconfig'
+      - 'Makefile'
       - 'boards/**'
       - 'config/**'
+      - 'dts/**'
+      - 'include/**'
       - 'snippets/**'
+      - 'src/**'
+      - 'tests/**'
+      - 'zephyr/**'
       - 'build.yaml'
 
 jobs:
+  gesture-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Test gesture state machine
+        run: make test-gesture
+
   build:
     # main branch @ 2026-08-06 (matches config/west.yml zmk revision)
     uses: zmkfirmware/zmk/.github/workflows/build-user-config.yml@268b1b1e82150460f00fd701bcd08583d5c75d29
