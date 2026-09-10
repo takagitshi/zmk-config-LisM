@@ -113,7 +113,7 @@
 &kp AT_SIGN    &kp EXCLAMATION  &kp DOUBLE_QUOTES  &kp HASH              &kp DOLLAR                               &kp COMMA     &kp NUMBER_7  &kp NUMBER_8  &kp NUMBER_9  &kp PLUS
 &kp PERCENT    &kp LEFT_BRACE   &kp RIGHT_BRACE    &kp LEFT_PARENTHESIS  &kp RIGHT_PARENTHESIS                    &kp PERIOD    &kp NUMBER_4  &kp NUMBER_5  &kp NUMBER_6  &kp MINUS
 &kp AMPERSAND  &kp GRAVE        &kp PIPE           &kp LEFT_BRACKET      &kp RIGHT_BRACKET                        &kp NUMBER_0  &kp NUMBER_1  &kp NUMBER_2  &kp NUMBER_3  &kp ASTERISK
-&kp TILDE      &kp SQT          &kp CARET          &none                 &trans                 &trans    &trans  &kp DELETE    &none         &kp LA(Y)     &kp EQUAL     &kp SLASH
+&kp TILDE      &kp SQT          &kp CARET          &none                 &trans                 &trans    &trans  &kp DELETE    &none         &kp COLON     &kp EQUAL     &kp SLASH
                                 &none              &none                 &none                                    &none         &none         &none
             >;
         };
