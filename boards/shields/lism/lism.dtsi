@@ -152,7 +152,7 @@
         #input-processor-cells = <0>;
         status = "disabled";
         layer = <3>;
-        threshold = <30>;
+        threshold = <60>;
         cooldown-ms = <150>;
         reset-on-layer = <2>;
         bindings = <&kp LC(LS(TAB))>, <&kp LC(TAB)>;
@@ -163,7 +163,7 @@
         #input-processor-cells = <0>;
         status = "disabled";
         layer = <4>;
-        threshold = <30>;
+        threshold = <60>;
         cooldown-ms = <150>;
         reset-on-layer = <2>;
         bindings = <&kp LC(LEFT_ARROW)>, <&kp LC(RIGHT_ARROW)>;
