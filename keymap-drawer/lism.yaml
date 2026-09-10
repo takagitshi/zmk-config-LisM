@@ -285,7 +285,7 @@ layers:
   - {t: ▽, type: trans}
   - $$mdi:backspace-reverse-outline$$
   - ''
-  - Alt+Y
+  - ':'
   - '='
   - /
   - ''
